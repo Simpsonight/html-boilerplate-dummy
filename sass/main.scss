@@ -1,0 +1,177 @@
+/*
+ * brandung SCSS v1.0.2
+ *
+ * Copyright 2013, brandung GmbH & Co.KG
+ * http://www.agentur-brandung.com
+ */
+
+// Core variables and mixins
+@import "brandung/variables"; // Modify this for custom colors, font-sizes, etc
+@import "brandung/mixins";
+
+// Compass mixins (as needed)
+$experimental-support-for-opera: false; // deactivate vendor prefix support
+$experimental-support-for-khtml: false; // deactivate vendor prefix support
+// remove comment when needed
+// @import "compass/css3/border-radius";
+// @import "compass/css3/background-size";
+// @import "compass/css3/text-shadow";
+// @import "compass/css3/box-shadow";
+// @import "compass/css3/box-sizing";
+@import "compass/utilities/general/clearfix";
+
+// CSS browser reset
+@import "vendor/normalize";
+
+// h5bp
+@import "vendor/h5bp";
+
+// Grid layout
+@import "vendor/gridset";
+@import "vendor/sass-ie";
+@import "brandung/layout";
+
+// Layout
+@import "brandung/typo";
+
+// Utilities
+// @import "vendor/retina-sprites";
+// @import "vendor/retina-background-image";
+
+
+/* ==========================================================================
+   Author: [brandung GmbH & Co.KG]
+   ========================================================================== */
+
+/* Noscript ======================================================= */
+noscript {
+    color: $white;
+    margin: 0.2em 0;
+    background: $ciColor;
+    padding: 0.2em 0;
+    text-align: center;
+    p {
+      margin: 0 auto;
+      max-width: $wrapperMaxWidth;
+    }
+}
+
+/* Content Blocks ======================================================= */
+
+/* header */
+header {}
+
+/* container */
+#main {}
+
+/* footer */
+footer {
+}
+
+/* Content Elements ======================================================= */
+
+
+/* ==|== clearing ===========================================================
+  clearfix
+  =========================================================================== */
+header:after,
+nav:after,
+#main:after,
+footer:after {
+	display: block;
+	content: ".";
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+/* ==|== IE Rules ==========================================================
+  IE Rules
+  ========================================================================== */
+
+/* IE < 9 */
+
+/* IE < 8 */
+.lt-ie8 header,
+.lt-ie8 nav,
+.lt-ie8 #main,
+.lt-ie8 footer {
+	display: inline-block;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.left {
+	display: inline;
+	float: left;
+}
+
+.right {
+	display: inline;
+	float: right;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+/* ==========================================================================
+   media queries
+   ========================================================================== */
+
+/* Desktop */
+@media only screen and (min-width: 769px) {
+	body:after {
+		content: 'desktop';
+		display: none;
+	}
+}
+
+/* Tablet (portrait) */
+@media only screen and (max-width: 768px) {
+	body:after {
+		content: 'tablet';
+		display: none;
+	}
+}
+
+/* Smartphones (landscape)  */
+@media only screen and (max-width: 480px) {
+	body:after {
+		content: 'smartphone';
+		display: none;
+	}
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 320px) {
+}

@@ -1,13 +1,13 @@
 /*
  * brandung SCSS v1.0.2
  *
- * Copyright 2013, brandung GmbH & Co.KG
- * http://www.agentur-brandung.com
+ * Copyright 2014, brandung GmbH & Co.KG
+ * http://www.brandung.de
  */
 
 // Core variables and mixins
-@import "brandung/variables"; // Modify this for custom colors, font-sizes, etc
-@import "brandung/mixins";
+@import "bra/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bra/mixins";
 
 // Compass mixins (as needed)
 $experimental-support-for-opera: false; // deactivate vendor prefix support
@@ -29,15 +29,20 @@ $experimental-support-for-khtml: false; // deactivate vendor prefix support
 // Grid layout
 @import "vendor/gridset";
 @import "vendor/sass-ie";
-@import "brandung/layout";
+@import "bra/layout";
 
 // Layout
-@import "brandung/typo";
+@import "bra/typo";
 
 // Utilities
 // @import "vendor/retina-sprites";
 // @import "vendor/retina-background-image";
 
+
+// Modules
+// bower:scss
+
+// endbower
 
 /* ==========================================================================
    Author: [brandung GmbH & Co.KG]

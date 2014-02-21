@@ -4,14 +4,16 @@
  * Copyright 2014, brandung GmbH & Co.KG
  * http://www.brandung.de
  */
-
 // Core variables and mixins
-@import "bra/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bra/variables";
+// Modify this for custom colors, font-sizes, etc
 @import "bra/mixins";
 
 // Compass mixins (as needed)
-$experimental-support-for-opera: false; // deactivate vendor prefix support
-$experimental-support-for-khtml: false; // deactivate vendor prefix support
+$experimental-support-for-opera: false;
+// deactivate vendor prefix support
+$experimental-support-for-khtml: false;
+// deactivate vendor prefix support
 // remove comment when needed
 // @import "compass/css3/border-radius";
 // @import "compass/css3/background-size";
@@ -34,15 +36,12 @@ $experimental-support-for-khtml: false; // deactivate vendor prefix support
 // Layout
 @import "bra/typo";
 
-// Utilities
+// Modules
+@import "mod";
+
+// Utilities (as needed)
 // @import "vendor/retina-sprites";
 // @import "vendor/retina-background-image";
-
-
-// Modules
-// bower:scss
-
-// endbower
 
 /* ==========================================================================
    Author: [brandung GmbH & Co.KG]
@@ -50,31 +49,32 @@ $experimental-support-for-khtml: false; // deactivate vendor prefix support
 
 /* Noscript ======================================================= */
 noscript {
-    color: $white;
-    margin: 0.2em 0;
-    background: $ciColor;
-    padding: 0.2em 0;
-    text-align: center;
-    p {
-      margin: 0 auto;
-      max-width: $wrapperMaxWidth;
-    }
+	color: $white;
+	margin: 0.2em 0;
+	background: $ciColor;
+	padding: 0.2em 0;
+	text-align: center;
+	p {
+		margin: 0 auto;
+		max-width: $wrapperMaxWidth;
+	}
 }
 
 /* Content Blocks ======================================================= */
 
 /* header */
-header {}
+header {
+}
 
 /* container */
-#main {}
+#main {
+}
 
 /* footer */
 footer {
 }
 
 /* Content Elements ======================================================= */
-
 
 /* ==|== clearing ===========================================================
   clearfix
@@ -91,7 +91,6 @@ footer:after {
 	height: 0;
 	overflow: hidden;
 }
-
 
 /* ==|== IE Rules ==========================================================
   IE Rules

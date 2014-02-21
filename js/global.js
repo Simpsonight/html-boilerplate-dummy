@@ -22,6 +22,11 @@ if (!(window.console && console.log)) {
 */
 var Brandung = Brandung || {};
 
+/**
+ * set folder path
+ * @type {string}
+ */
+Brandung.folderPath = '';
 
 /**
  * IE <= 8 detection 
@@ -41,7 +46,7 @@ Brandung.Mobile = {
 
 	init : function() {
 	}
-}
+};
 
 /**
  * check orientation
@@ -55,7 +60,7 @@ Brandung.Mobile.checkOrientation = function() {
 	} else {
 		$('body').removeClass('landscape').addClass('portrait');
 	};
-}
+};
 
 /**
  * get media device selector
@@ -73,7 +78,7 @@ Brandung.Mobile.getWindowWidth = function() {
 	} else {
 		Brandung.Mobile.mediaDevice = window.getComputedStyle(document.body, ':after').getPropertyValue('content');	
 	}
-}
+};
 
 
 // add event listener
@@ -103,10 +108,28 @@ $(window).bind('orientationchange', function() {
 Brandung.Plugins = {
 	
 	init: function() {
+		// load plugin scripts
+		Brandung.Plugins.loadScripts();
 	}
 	
-}
+};
 
+/**
+ * load script
+ *
+ * If selector exist, call getScriptCall function to load external javascript source
+ * {string} - URL to javascript
+ * {function} - callback function
+ */
+Brandung.Plugins.loadScripts = function() {
+
+	// dummy call
+	//if ($('[SELECTOR]').length) {
+	//	Brandung.Functions.getScriptCall(Brandung.folderPath + '[PATH_TO_JS_SOURCE]', function () {
+	//		// do something after script has been loaded
+	//	});
+	//}
+};
 
 /**
 #####################################
@@ -120,7 +143,31 @@ Brandung.Functions = {
 	init: function() {
 	}
 	
-}
+};
+
+/**
+ * get script call
+ *
+ * @param {string} URL to javascript
+ * @param {function} callback
+ */
+Brandung.Functions.getScriptCall = function (URL, callback) {
+	$.ajax({
+		url: URL,
+		cache: true,
+		dataType: 'script',
+		success: function () {
+			if (callback && typeof(callback) === "function") {
+				callback();
+			}
+		},
+		error: function (xhr, status, error) {
+			console.log(status);
+			console.log(error);
+			console.log('Das Skript ' + URL + ' konnte nicht geladen werden!');
+		}
+	})
+};
 
 
 /**

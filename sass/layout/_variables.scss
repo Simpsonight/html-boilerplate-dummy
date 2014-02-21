@@ -1,0 +1,49 @@
+/**
+ * brandung variables.scss v1.0.1
+ *
+ * Copyright 2014, 2014 brandung GmbH & Co.KG
+ * http://www.brandung.de/
+ *
+ * Date: 2014-02-21
+ * MIT License (MIT)
+ */
+
+
+/* Body font size */
+$bodyFontSizePX: 16; 											// 16px
+$bodyFontSize: $bodyFontSizePX/16*100; 		// in percent
+
+/* Container width */
+$wrapperMaxWidth: 1280;	// in px
+$contentWidth: 960;		// in px
+
+/* layout */
+$breakpoint1: (320/16) + em; // => 20em;		=> mobile: min-width 320px
+$breakpoint2: (768/16) + em; // => 48em;		=> tablet: min-width 768px
+$breakpoint3: (990/16) + em; // => 61.875em;	=> desktop: min-width 990px
+
+/* Colors */
+$black: #000 !default;
+$greyDarker: #222 !default;
+$greyDark: #333 !default;
+$grey: #555 !default;
+$greyLight: #ddd !default;
+$greyLighter: #eee !default;
+$white: #fff !default;
+$grey: #e6e6e6 !default;
+$grey2: #f8f8f8 !default;
+$grey3: #ccc !default;
+
+/* Scaffolding */
+$bodyBackground: $white !default;
+$textColor: $greyDark !default;
+$ciColor: #c00;
+
+/* Links */
+$linkColor: #08c !default;
+$linkColorHover: darken($linkColor, 15%) !default;
+
+/* retina sprites */
+// $sprites: sprite-map("icons/*.png", $spacing: 20px);
+// $sprites2x: sprite-map("icons-2x/*.png", $spacing: 40px);
+/**/

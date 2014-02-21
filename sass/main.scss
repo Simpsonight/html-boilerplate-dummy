@@ -1,53 +1,100 @@
-/*
- * brandung SCSS v1.0.2
+/**
+ * brandung SCSS boilerplate v1.0.3
  *
- * Copyright 2014, brandung GmbH & Co.KG
- * http://www.brandung.de
+ * Copyright 2014, 2014 brandung GmbH & Co.KG
+ * http://www.brandung.de/
+ *
+ * Date: 2014-02-21
+ * MIT License (MIT)
  */
-// Core variables and mixins
-@import "bra/variables";
-// Modify this for custom colors, font-sizes, etc
-@import "bra/mixins";
 
-// Compass mixins (as needed)
+
+/**
+ *  core variables and mixins
+ *  - modify this for custom colors, font-sizes, etc
+ */
+@import "layout/variables";
+@import "layout/mixins";
+
+
+/**
+ * compass imports
+ * http://compass-style.org/
+ *
+ * - remove comment when mixin is needed
+ * - deactivate vendor prefix support for opera and khtml browser
+ */
 $experimental-support-for-opera: false;
-// deactivate vendor prefix support
 $experimental-support-for-khtml: false;
-// deactivate vendor prefix support
-// remove comment when needed
 // @import "compass/css3/border-radius";
 // @import "compass/css3/background-size";
 // @import "compass/css3/text-shadow";
 // @import "compass/css3/box-shadow";
 // @import "compass/css3/box-sizing";
-@import "compass/utilities/general/clearfix";
+// @import "compass/utilities/general/clearfix";
 
-// CSS browser reset
+
+/**
+ * normalize
+ * https://github.com/necolas/normalize.css
+ */
 @import "vendor/normalize";
 
-// h5bp
+
+/**
+ * h5bp main.css
+ * https://github.com/h5bp/html5-boilerplate
+ */
 @import "vendor/h5bp";
 
-// Grid layout
+
+/**
+ * gridset app
+ * https://gridsetapp.com/
+ */
 @import "vendor/gridset";
 @import "vendor/sass-ie";
-@import "bra/layout";
 
-// Layout
-@import "bra/typo";
 
-// Modules
-@import "mod";
-
-// Utilities (as needed)
+/**
+ * vendor utilities
+ * - remove comment when mixin is needed
+ */
 // @import "vendor/retina-sprites";
 // @import "vendor/retina-background-image";
 
-/* ==========================================================================
-   Author: [brandung GmbH & Co.KG]
-   ========================================================================== */
 
-/* Noscript ======================================================= */
+/**
+ * layout
+ * - brandung layout files
+ * - here you can add new files if needed
+ */
+@import "layout/layout";
+@import "layout/typo";
+@import "layout/helpers";
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/icons";
+
+
+/**
+ * modules placeholer
+ * - import all modules files
+ *
+ * - for grunt-process:
+ * - package files by download builder
+ * - add files by appendAssets task in project builder (bra-pd)
+ */ 
+
+// --- start|bra-pb: scss ---
+
+// --- end|bra-pb: scss ---
+
+/* ==========================================================================
+  Content Blocks
+  ========================================================================== */
+
+/* noscript */
 noscript {
 	color: $white;
 	margin: 0.2em 0;
@@ -60,39 +107,39 @@ noscript {
 	}
 }
 
-/* Content Blocks ======================================================= */
-
 /* header */
 header {
+	&:after {
+		@extend .clearfix;
+	}
+}
+
+/* nav */
+nav {
+	&:after {
+		@extend .clearfix;
+	}
 }
 
 /* container */
 #main {
+	&:after {
+		@extend .clearfix;
+	}
 }
 
 /* footer */
 footer {
+	&:after {
+		@extend .clearfix;
+	}
 }
 
-/* Content Elements ======================================================= */
+/* ==========================================================================
+  Content Elements
+  ========================================================================== */
 
-/* ==|== clearing ===========================================================
-  clearfix
-  =========================================================================== */
-header:after,
-nav:after,
-#main:after,
-footer:after {
-	display: block;
-	content: ".";
-	clear: both;
-	font-size: 0;
-	line-height: 0;
-	height: 0;
-	overflow: hidden;
-}
-
-/* ==|== IE Rules ==========================================================
+/* ==========================================================================
   IE Rules
   ========================================================================== */
 
@@ -104,48 +151,6 @@ footer:after {
 .lt-ie8 #main,
 .lt-ie8 footer {
 	display: inline-block;
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.unstyled {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.left {
-	display: inline;
-	float: left;
-}
-
-.right {
-	display: inline;
-	float: right;
-}
-
-.center {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.clear {
-	clear: both;
-}
-
-.textRight {
-	text-align: right;
-}
-
-.textLeft {
-	text-align: left;
-}
-
-.textCenter {
-	text-align: center;
 }
 
 /* ==========================================================================

@@ -1,10 +1,10 @@
 /**
- * brandung SCSS boilerplate v1.0.3
+ * brandung SCSS boilerplate v1.0.4
  *
  * Copyright 2014, 2014 brandung GmbH & Co.KG
  * http://www.brandung.de/
  *
- * Date: 2014-02-21
+ * Date: 2014-03-13
  * MIT License (MIT)
  */
 
@@ -13,25 +13,8 @@
  *  core variables and mixins
  *  - modify this for custom colors, font-sizes, etc
  */
-@import "layout/variables";
-@import "layout/mixins";
-
-
-/**
- * compass imports
- * http://compass-style.org/
- *
- * - remove comment when mixin is needed
- * - deactivate vendor prefix support for opera and khtml browser
- */
-$experimental-support-for-opera: false;
-$experimental-support-for-khtml: false;
-// @import "compass/css3/border-radius";
-// @import "compass/css3/background-size";
-// @import "compass/css3/text-shadow";
-// @import "compass/css3/box-shadow";
-// @import "compass/css3/box-sizing";
-// @import "compass/utilities/general/clearfix";
+@import "partials/variables";
+@import "partials/mixins";
 
 
 /**
@@ -69,19 +52,20 @@ $experimental-support-for-khtml: false;
  * - brandung layout files
  * - here you can add new files if needed
  */
-@import "layout/layout";
-@import "layout/typo";
-@import "layout/helpers";
-@import "layout/buttons";
-@import "layout/forms";
-@import "layout/icons";
+@import "partials/layout";
+@import "partials/typo";
+@import "partials/helpers";
+@import "partials/buttons";
+@import "partials/forms";
+@import "partials/icons";
+@import "partials/sprite-icons";
 
 
 /**
- * modules placeholer
+ * modules placeholder
  * - import all modules files
  *
- * - for grunt-process:
+ * - for grunt-build-process:
  * - package files by download builder
  * - add files by appendAssets task in project builder (bra-pd)
  */
@@ -161,7 +145,12 @@ footer {
 @media only screen and (min-width: 769px) {
 	body:after {
 		content: 'desktop';
-		display: none;
+		position: absolute;
+		top: -100em;
+		left: -100em;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 }
 
@@ -169,7 +158,12 @@ footer {
 @media only screen and (max-width: 768px) {
 	body:after {
 		content: 'tablet';
-		display: none;
+		position: absolute;
+		top: -100em;
+		left: -100em;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 }
 
@@ -177,10 +171,24 @@ footer {
 @media only screen and (max-width: 480px) {
 	body:after {
 		content: 'smartphone';
-		display: none;
+		position: absolute;
+		top: -100em;
+		left: -100em;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
 	}
 }
 
 /* Smartphones (portrait) */
 @media only screen and (max-width: 320px) {
+	body:after {
+		content: 'smartphone';
+		position: absolute;
+		top: -100em;
+		left: -100em;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
 }

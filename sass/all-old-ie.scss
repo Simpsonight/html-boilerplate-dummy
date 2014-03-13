@@ -1,5 +1,5 @@
-@import 'main'; 
 $old-ie: true;
-$fix-mqs: $breakpoint3 // 990px
+$fix-mqs: 61.875em; // => desktop: min-width 990px
+@import 'main';
 
 

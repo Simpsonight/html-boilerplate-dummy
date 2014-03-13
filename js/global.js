@@ -59,7 +59,7 @@ Brandung.Mobile.checkOrientation = function() {
 		$('body').removeClass('portrait').addClass('landscape');
 	} else {
 		$('body').removeClass('landscape').addClass('portrait');
-	};
+	}
 };
 
 /**
@@ -87,7 +87,7 @@ $(window).load(function(){
 	Brandung.Mobile.checkOrientation();
 });
 
-$(window).resize(function(event){
+$(window).resize(function(){
 	// call function only on desktop devices
 	if((!Modernizr.touch && window.orientation != 0) || (Modernizr.touch && window.orientation != 0)) {
 		Brandung.Mobile.getWindowWidth();	
@@ -168,6 +168,12 @@ Brandung.Functions.getScriptCall = function (URL, callback) {
 		}
 	})
 };
+
+/**
+ * snippets placeholer
+ */
+// --- start|bra-pb: js ---
+// --- end|bra-pb: js ---
 
 
 /**
